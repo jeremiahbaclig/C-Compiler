@@ -1,6 +1,7 @@
 # Jeremiah Baclig - Lexer (2/18/2020)
 
-import re, sys
+import re
+import sys
 
 
 def looper(split_txt, regexes):
