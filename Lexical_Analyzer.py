@@ -9,26 +9,26 @@ def looper(split_txt, regexes):
         temp = characters
         for index in regexes:
             for index in regexes:
-                if index.match(temp) is not None:
-                    match_string = index.match(temp).group()
-                    if regexes[0] is index:
-                        print("KW: " + match_string)
-                        temp = temp.replace(match_string, '', 1)
-                    elif regexes[1] is index:
-                        print(match_string)
-                        temp = temp.replace(match_string, '', 1)
-                    elif regexes[2] is index:
-                        print("ID: " + match_string)
-                        temp = temp.replace(match_string, '', 1)
-                    elif regexes[3] is index:
-                        print("NUM: " + match_string)
-                        temp = temp.replace(match_string, '', 1)
-                    elif regexes[4] is index:
-                        print("ERROR: " + match_string)
-                        temp = temp.replace(match_string, '', 1)
-
-                if temp == "":
-                    break
+                for index in regexes:
+                    if index.match(temp) is not None:
+                        match_string = index.match(temp).group()
+                        if regexes[0] is index:
+                            print("ID: " + match_string)
+                            temp = temp.replace(match_string, '', 1)
+                        elif regexes[1] is index:
+                            print(match_string)
+                            temp = temp.replace(match_string, '', 1)
+                        elif regexes[2] is index:
+                            print("KW: " + match_string)
+                            temp = temp.replace(match_string, '', 1)
+                        elif regexes[3] is index:
+                            print("NUM: " + match_string)
+                            temp = temp.replace(match_string, '', 1)
+                        elif regexes[4] is index:
+                            print("ERROR: " + match_string)
+                            temp = temp.replace(match_string, '', 1)
+                    if temp == "":
+                        break
 
 
 # regexes & appending to list
