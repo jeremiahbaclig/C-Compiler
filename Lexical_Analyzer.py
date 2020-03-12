@@ -3,7 +3,6 @@
 import re
 import sys
 
-
 def looper(split_txt, regexes):
     for characters in split_txt:
         temp = characters
@@ -30,7 +29,6 @@ def looper(split_txt, regexes):
                     if temp == "":
                         break
 
-
 # regexes & appending to list
 keywords = re.compile('return|while|else|void|int|if')
 special = re.compile('-|\+|\/\*|\*\/|\*|\/|<=|<|>=|>|==|!=|=|;|,|\)|\(|]|\[|{|}')
@@ -54,7 +52,7 @@ reader = file.read()
 comments = re.sub(singComments, '', reader)
 rComments = re.sub(multiComments, '', comments)
 
-# split at white space - test print
+# split at white space
 text = rComments.split()
 
 # call looper func to iterate through list and apply regex list
