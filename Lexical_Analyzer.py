@@ -1,4 +1,4 @@
-# Jeremiah Baclig - Lexer (2/18/2020)
+# Jeremiah Baclig - Lexer(fixed) - 2/18/2020 
 
 import re
 import sys
