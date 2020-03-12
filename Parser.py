@@ -41,7 +41,7 @@ errors = re.compile('@|\!|\_')
 regex_list = [id, special, keywords, num, errors]
 
 try:
-    file = open('test.txt', 'r')
+    file = open(sys.argv[1], 'r')
 except FileNotFoundError:
     print("File not found.")
     sys.exit()
